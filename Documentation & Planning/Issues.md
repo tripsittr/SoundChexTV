@@ -1,24 +1,17 @@
-# Issues — SoundChex for smart TVs (web)
+# Issues — moved to the admin tracker
 
-LG webOS + Samsung Tizen + Vizio SmartCast. `TV-NN` numbering.
-**In progress → Open → Deferred → Done**; nothing deleted.
+Issue and to-do tracking for **every SoundChex repo** now lives in the database,
+managed from the SoundChex landing site's admin panel — not in this file.
 
-## Open
+- **Admin panel:** `/admin` on the SoundChex website → **Tracker**. Create, edit,
+  filter (by platform, status, type, repo) and publish items.
+- **From the console:** `php artisan track:issue` in the **SoundChexWebsite**
+  repo — interactive, or with flags (`--platform --type --status --repo --ref
+  --publish`).
 
-| ID | What | Notes |
-|----|------|-------|
-| TV-01 | Shared web UI approach | Decide plain web vs. light framework; 10-foot layout, D-pad/remote focus navigation, TV-safe areas. Reuse the `/api/v1/*` API. |
-| TV-02 | Auth + browse + play | Profile picker + token auth; library browse/search; HTML5 video against the token-authed stream. |
-| TV-03 | webOS packaging | webOS TV SDK / `ares` CLI, `.ipk`, developer-mode sideload, then LG Content Store. |
-| TV-04 | Tizen packaging | Tizen Studio, `.wgt`, Samsung Seller Portal. |
-| TV-05 | SmartCast packaging | Vizio partner SDK / program (newer SmartCast accepts web apps). |
+This repo's historical `Issues.md` was imported into the tracker (keyed on its
+original reference ids), and the full backlog is reproducible from
+`SoundChexWebsite/database/seeders/data/items.json`. Nothing was lost.
 
-## Deferred
-
-_(none yet)_
-
-## Done
-
-| ID | What | When | Notes |
-|----|------|------|-------|
-| TV-00 | Repo + licence + docs | 2026-09-17 | Scaffold. |
+> **Workflow:** log new work as a tracker item *before* starting it — the same
+> discipline the Markdown tracker enforced, in the database now.
